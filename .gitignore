@@ -23,7 +23,8 @@ public/css/main.css
 coverage
 
 # API keys and secrets
-.env
+# .env
+# .env.local
 
 # Dependency directory
 node_modules
