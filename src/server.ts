@@ -1,10 +1,18 @@
 import express from 'express'
 
-var cors = require('cors')
+import { Router, Request, Response } from 'express';
+
 const app = express();
-app.use(cors())
+
+const route = Router()
+
 app.use(express.json())
-require('dotenv').config()
+
+route.get('/', (req: Request, res: Response) => {
+  res.json({ message: 'server running on port 3000' })
+})
+
+app.use(route)
 
 
-app.listen(process.env.PORT || 3000, () => `server running on port ${process.env.PORT || 3000}`)
+app.listen(3000, () => 'server running on port 3000')
