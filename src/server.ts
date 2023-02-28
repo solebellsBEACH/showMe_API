@@ -12,7 +12,6 @@ route.get('/', (req: Request, res: Response) => {
   res.json({ message: 'server running on port 3000' })
 })
 
-app.use(route)
+app.use(route);
 
-
-app.listen(3000, () => 'server running on port 3000')
+app.listen(3000, () => 'server running on port 3000');
