@@ -7,8 +7,9 @@
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
     "build": "tsc",
     "start": "node ./dist/server.js",
-    "migration:create": "cd src/database && npx sequelize-cli migration:generate --name ",
-    "connect:test":"node src/database/connection.ts"
+    "migration:create": "sequelize migration:create --name",
+    "connect:test": "node src/database/connection.ts"
+
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -21,7 +22,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.2",
     "postgres": "^3.3.3",
-    "sequelize": "^6.28.0"
+    "sequelize": "^6.28.0",
+    "sequelize-cli": "^6.6.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
