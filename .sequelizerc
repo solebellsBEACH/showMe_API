@@ -3,13 +3,11 @@ require('@babel/polyfill');
 const path = require('path');
 
 module.exports = {
-  config: path.resolve(__dirname, 'dist', 'app', 'configs', 'database.js'),
-  'models-path': path.resolve(__dirname, 'dist', 'app', 'models'),
-  'seeders-path': path.resolve(__dirname, 'dist', 'app', 'database', 'seeders'),
+  config: path.resolve('src', 'app', 'database', 'config', 'config.js'),
+  'models-path': path.resolve('src', 'app', 'database', 'models'),
+  'seeders-path': path.resolve('src', 'app', 'database', 'database', 'seeders'),
   'migrations-path': path.resolve(
-    __dirname,
-    'dist',
-    'app',
+    'src', 'app', 'database',
     'database',
     'migrations',
   ),
