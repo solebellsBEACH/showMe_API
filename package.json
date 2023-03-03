@@ -1,13 +1,27 @@
 {
   "name": "showme_api",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "dev": "nodemon --watch 'src/**/*.ts' --ignore __tests__ --exec ts-node src/index.ts",
     "build": "tsc",
     "start": "node ./dist/server.js",
-    "migration:create": "sequelize migration:create --name"
+    "migration:create": "sequelize migration:create --name",
+    "lint": "eslint src/** __tests__/**",
+    "lint:fix": "yarn lint --fix --quiet",
+    "predev": "yarn compile",
+    "createDb": "NODE_ENV=developement sequelize db:create"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{ts}": [
+      "eslint . --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
