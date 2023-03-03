@@ -6,6 +6,7 @@ export class User extends Model implements IUser {
 
   id: number;
   name: string;
+  role:string;
   created_at: Date;
   updated_at: Date;
 
@@ -21,6 +22,10 @@ export class User extends Model implements IUser {
           type: new DataTypes.STRING(),
           allowNull: false,
         },
+        role: {
+          type: new DataTypes.STRING(),
+          allowNull: false,
+        },
         created_at: {
           type: DataTypes.DATE,
         },
@@ -30,7 +35,7 @@ export class User extends Model implements IUser {
       },
 
       {
-        tableName: 'clients',
+        tableName: 'users',
         underscored: true,
         sequelize,
       },
