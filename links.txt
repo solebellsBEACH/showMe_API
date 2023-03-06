@@ -1,1 +1,5 @@
 https://stackoverflow.com/questions/70371646/sequelize-cli-db-migrations-with-typescript
+
+Documentation 
+
+run migration : yarn compile && yarn migration
