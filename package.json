@@ -12,7 +12,8 @@
     "createDb": "set NODE_ENV=developement && sequelize db:create",
     "precompile": "rimraf dist",
     "compile": "yarn tsc -p tsconfig-build.json",
-    "migration":"sequelize db:migrate"
+    "migration":"yarn compile && sequelize db:migrate",
+    "migration:update":"yarn compile && sequelize db:migrate:undo && yarn migration"
   },
   "eslintConfig": {
     "extends": [

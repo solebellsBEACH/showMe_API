@@ -8,6 +8,22 @@ export async function up(queryInterface: QueryInterface): Promise<void> {
       autoIncrement: true,
       allowNull: false,
     },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    role: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    created_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
   });
 }
 
