@@ -16,6 +16,10 @@ export async function up(queryInterface: QueryInterface): Promise<void> {
       type: DataTypes.STRING,
       allowNull: false,
     },
+   image_url: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     created_at: {
       type: DataTypes.DATE,
       allowNull: false,

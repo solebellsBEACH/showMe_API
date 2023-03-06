@@ -13,7 +13,8 @@
     "precompile": "rimraf dist",
     "compile": "yarn tsc -p tsconfig-build.json",
     "migration":"yarn compile && sequelize db:migrate",
-    "migration:update":"yarn compile && sequelize db:migrate:undo && yarn migration"
+    "migration:update":"yarn compile && sequelize db:migrate:undo && yarn migration",
+    "seed":"sequelize db:seed:all"
   },
   "eslintConfig": {
     "extends": [

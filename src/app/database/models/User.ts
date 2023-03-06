@@ -1,3 +1,4 @@
+import { Role } from '@/app/enums/Roles';
 import { DataTypes, Model, Sequelize } from 'sequelize';
 
 import { IUser } from '../entities/IUser';
@@ -6,7 +7,7 @@ export class User extends Model implements IUser {
 
   id: number;
   name: string;
-  role:string;
+  role:Role;
   created_at: Date;
   updated_at: Date;
 
